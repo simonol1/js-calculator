@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
     var testNumLength = function(number) {
         if (number.length > 9) {
@@ -8,22 +10,36 @@ $(document).ready(function(){
             }
         }
     };
+
+    // declare empty global variables
     var number = "";
     var newnumber = "";
     var operator = "";
+
+    // totals will be added to the display screen, but the default number showing will be 0
     var totaldiv = $("#total");
     totaldiv.text("0");
+
+    // add events listener/click function for numbers
     $("#numbers a").not("#clear,#clearall").click(function(){
         number += $(this).text();
         totaldiv.text(number);
         testNumLength(number);
     });
+
+    // add events listener/click function for operators
+    // declare local variables
+    //
     $("#operators a").not("#equals").click(function(){
         operator = $(this).text();
         newnumber = number;
         number = "";
         totaldiv.text("0");
     });
+
+    //AC and C buttons, add events listeners for these.
+    //If they are clicked the screen will return an empty string
+    //declare local variable
     $("#clear,#clearall").click(function(){
         number = "";
         totaldiv.text("0");
@@ -31,7 +47,11 @@ $(document).ready(function(){
             newnumber = "";
         }
     });
-    //Add your last .click() here!
+
+  // add events listener for the equals button.
+  //If/else statement used to show process for each operator.
+  //Use parseINT to change string into number.
+  // declare the local variables
     $("#equals").click(function(){
         if (operator === "+"){
             number = (parseInt(number, 10) + parseInt(newnumber,10)).toString(10);
