@@ -1,5 +1,7 @@
 
-
+//function to test the number of digits on the screen, number length.
+//If the number is between 9-15 character long, return the number
+//If the number is longer then 15, return err message on screen
 $(document).ready(function(){
     var testNumLength = function(number) {
         if (number.length > 9) {
@@ -20,7 +22,10 @@ $(document).ready(function(){
     var totaldiv = $("#total");
     totaldiv.text("0");
 
-    // add events listener/click function for numbers
+    // add events listener/click function for numbers, but do not include C & AC
+    //use this.text() to grab value from button and append to number
+    //set the .text of totaldiv to number
+    //call the testNumLength function and pass the number in as the parameter
     $("#numbers a").not("#clear,#clearall").click(function(){
         number += $(this).text();
         totaldiv.text(number);
@@ -29,7 +34,6 @@ $(document).ready(function(){
 
     // add events listener/click function for operators
     // declare local variables
-    //
     $("#operators a").not("#equals").click(function(){
         operator = $(this).text();
         newnumber = number;
