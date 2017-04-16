@@ -7,8 +7,8 @@ body, div, a {
 #calculator {
     background-color: #5d86bb;
     width: 310px;
-    height: 550px;
-    border: 3px black solid;
+    height: 580px;
+    border: 3px #264d73 solid;
     margin: 10px auto;
     padding: 5px;
     border-radius: 10px;
@@ -16,6 +16,14 @@ body, div, a {
 }
 header {
     text-align: center;
+    color: #e0e0eb;
+    padding: none;
+    margin: none;
+    font-family: 'Segoe Print' ;
+}
+
+.red {
+    background-color: red;
 }
 #total {
     height: 70px;
@@ -45,10 +53,13 @@ header {
     font-size: 39px;
     padding: 2px;
     margin: 5px 6px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
     background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
     border-radius: 10px;
+    box-shadow: inset 0px -2px 10px
+
 }
 
 #numbers a {
@@ -65,4 +76,5 @@ header {
     background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
     background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
     border-radius: 10px;
+    box-shadow: inset 0px -2px 10px
 }
